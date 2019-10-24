@@ -16,19 +16,7 @@ const createProductController =
 
 const updateProductController =
     (req, res) => {
-        const id = req.params.id;
-        let index; //0
-        let productFilter;
-        products.filter((product, i) => {
-            if (product.id === id) {
-                productFilter = product;
-                index = i;
-            }
-        })
-        products[index] = {
-            ...productFilter,
-            ...req.body
-        }
+        const productFilter = products.filter(product => product.id === id)
         res.send(products)
 
     }
