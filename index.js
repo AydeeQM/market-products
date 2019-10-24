@@ -4,10 +4,12 @@ const router = require('./main/routes');
 
 const app = express();
 
-app.use('/api/v1', router);
+const productRoutes = require('./products/products.routes');
+app.use(bodyParser.json()); // middleware 
 
+app.use('/products', productRoutes);
 
 //server
 app.listen(8080, () => {
-  console.log('server on port 8080');
+    console.log('server on port 8080');
 });

@@ -1,6 +1,6 @@
 const express = require('express')
 const productController = require('./products.controller');
-const productDB = require('../../db').products;
+const products = require('../db').products;
 
 
 const app = express.Router()
