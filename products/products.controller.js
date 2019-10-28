@@ -4,7 +4,8 @@ const uuid = require('uuid/v4') //generador de id
 
 const getProductController =
     (req, res) => {
-        res.send(products)
+        // res.send(products)
+        res.render('index', { products })
     }
 
 const createProductController =
